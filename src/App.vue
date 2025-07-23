@@ -6,6 +6,7 @@ import Linguagens from "./components/Linguagens.vue";
 import { projetos } from "./lib/projetos";
 import Nav_principal from "./components/Nav_principal.vue";
 import Pagination from "./components/Pagination.vue";
+import Experiencia from "./components/Experiencia.vue";
 
 const currentPage = ref(1);
 const itemsPage = ref(8);
@@ -58,19 +59,12 @@ const pagination = computed(() => {
 });
 
 const textPrincipal = ref(1);
-
 const nextText = () => {
-  textPrincipal.value++;
-  if (textPrincipal.value > 2) {
-    textPrincipal.value = 1;
-  }
+  textPrincipal.value = textPrincipal.value === 3 ? 1 : textPrincipal.value + 1;
 };
 
 const prevText = () => {
-  textPrincipal.value--;
-  if (textPrincipal.value < 1) {
-    textPrincipal.value = 2;
-  }
+  textPrincipal.value = textPrincipal.value === 1 ? 3 : textPrincipal.value - 1;
 };
 
 // Troca automática do texto principal a cada 8 segundos
@@ -112,10 +106,13 @@ const handleMouseLeave = () => {
       @mouseleave="handleMouseLeave"
     >
       <template v-if="textPrincipal === 1">
-      <Linguagens />
+        <Linguagens />
       </template>
       <template v-else-if="textPrincipal === 2">
-      <Sobre_mim />
+        <Sobre_mim />
+      </template>
+      <template v-else-if="textPrincipal === 3">
+        <Experiencia />
       </template>
       <Nav_principal @next="nextText" @prev="prevText" />
     </div>
