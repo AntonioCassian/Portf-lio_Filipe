@@ -1,0 +1,24 @@
+<!-- Salve como frame-dark-wood.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3e2f22"/>
+      <stop offset="100%" stop-color="#1c1c1c"/>
+    </linearGradient>
+    <pattern id="grain" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M0 2 L10 2 M5 0 L5 10" stroke="#5a4736" stroke-width="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Fundo da moldura -->
+  <rect width="200" height="200" fill="url(#grad)" rx="15" ry="15" />
+
+  <!-- Textura de grãos de madeira -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#grain)" rx="15" ry="15" />
+
+  <!-- Entalhes simples nas bordas -->
+  <path d="M15 0 L0 15 L15 30" fill="#523f2e" />
+  <path d="M185 0 L200 15 L185 30" fill="#523f2e" />
+  <path d="M15 200 L0 185 L15 170" fill="#523f2e" />
+  <path d="M185 200 L200 185 L185 170" fill="#523f2e" />
+</svg>

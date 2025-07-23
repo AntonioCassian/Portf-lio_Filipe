@@ -1,0 +1,231 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212;
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+} */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+/* button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.card {
+  /* padding: 2em; */
+}
+
+#app {
+  /* max-width: 1280px;
+  margin: 0 auto; */
+  /* padding: 2rem; */
+  text-align: center;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/* body {
+  background-color: #121212; /* Fundo escuro
+  color: #ffffff; /* Texto claro
+  font-family: 'Inter', sans-serif; /* Uma fonte moderna e legível
+  margin: 0;
+  padding: 0;
+} */
+
+/* body {
+  position: relative;
+  background-color: #121212;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(from 45deg,
+      oklch(38% 0.189 293.745) 0deg,
+      transparent 90deg,
+      oklch(38% 0.189 293.745) 180deg,
+      transparent 270deg,
+      oklch(38% 0.189 293.745) 360deg);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  animation: rotate-bg 60s linear infinite;
+} */
+
+/* @keyframes rotate-bg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+body {
+  position: relative;
+  background-color: #0e0e0e;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at top left, #1a1a1a 0%, #121212 100%);
+  background-size: 40px 40px, 40px 40px, cover;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+/* camada animada girando sutilmente */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg,
+      oklch(38% 0.2 290) 0deg,
+      transparent 90deg,
+      oklch(38% 0.2 290) 180deg,
+      transparent 270deg,
+      oklch(38% 0.2 290) 360deg);
+  opacity: 0.07;
+  animation: rotate-bg 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-25%, -25%);
+}
+
+/* camada de brilho suave */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* animação de rotação */
+/* @keyframes rotate-bg {
+  0% {
+    transform: rotate(0deg) translate(-25%, -25%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-25%, -25%);
+  }
+} */
+
+.intro {
+  text-align: center;
+  margin-top: 100px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.intro:has(.sobre-mim) {
+    margin-top: 0!important;
+}
+
+
+@keyframes blink {
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
+
+/* .intro h1 span {
+  color: #646cff; /* Azul suave 
+  font-weight: bold;
+  font-size: 3.5rem;
+  animation: blink 1s infinite;
+}
+
+.intro p {
+  font-size: 1.5rem;
+  color: #bbbbbb; /* Um tom mais suave pra descrição 
+} */
+
